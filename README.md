@@ -24,7 +24,7 @@ These constraints make results **not representative of full-dataset performance*
   - checkpoint saving (`checkpoints/best_food101_model.pth`)
   - history export (`checkpoints/history.json`)
 
-## How to run (detailed)
+## How to run
 
 ### 1) Get the notebook
 Clone the repo (or download as ZIP) and open:
@@ -151,7 +151,7 @@ You asked how much impact removing limits and training for ~50 epochs would have
 
 ### Removing the resolution limit (use larger IMG_SIZE)
 **Expected impact:**
-- Often a **significant accuracy jump** on fine-grained visual categories (food types can be subtle).
+- Often a **significant accuracy jump** on fine grained visual categories (food types can be subtle).
 - But compute/VRAM increases quickly (roughly proportional to pixel count and feature map sizes).  
   Going 112 → 224 is **4× pixels**, so it can feel like ~2–4×+ training cost depending on architecture.
 
@@ -164,4 +164,5 @@ So:
 - **Biggest practical improvement** (if allowed): keep the full dataset and switch to a pretrained backbone.
 
 ## Notes
-If you want better accuracy, increase `IMG_SIZE`, `EPOCHS`, and remove/raise the sample caps—but expect **significantly higher memory use and much longer training time**.
+If you want better accuracy, increase `IMG_SIZE`, `EPOCHS`, and remove/raise the sample caps but expect **significantly higher memory use and much longer training time**.
+
